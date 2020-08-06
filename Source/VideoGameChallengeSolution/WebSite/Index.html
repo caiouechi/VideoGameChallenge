@@ -1,0 +1,32 @@
+﻿<html ng-app="app">
+<head>
+    <title>Video game challenge</title>
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <script src="/app/app.module.js"></script>
+
+    <!-- controllers -->
+    <script src="/app/app.controller.js"></script>
+
+    <!-- routes -->
+    <script src="/app/app.route.js"></script>
+
+    <!-- components -->
+    <script src="/app/components/app.component.js"></script>
+    <script src="/app/components/app.edit.component.js"></script>
+    <script src="/app/components/app.menu.component.js"></script>
+
+    <!--Bootstrap style-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/app/css/videoGameChallengeBootstrap.css">
+</head>
+
+<body ng-controller="appController">
+    <app-menu></app-menu>
+    <div ng-view></div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<div ng-controller="appComponent">
+    <div class="jumbotron text-center">
+        <h1>Find your game</h1>
+        <h2>We found {{videoGameList.length}} result(s)</h2>
+        <form>
+            <div class="input-group">
+                <input ng-model="userTypeFilter" type="text" class="form-control" size="50" placeholder="Game name" required>
+                <div class="input-group-btn">
+                    <button type="button" ng-click="filterVideoGamesByName(userTypeFilter);" class="btn btn-danger">Filter</button>
+                </div>
+            </div>
+        </form>
+        <div class="container-fluid bg-3 text-center">
+            <div class="row">
+                <div class="col-sm-4" ng-repeat="item in videoGameList">
+                    <p>{{ item.Name }}</p>
+                    <img src="/app/images/{{item.CoverImageURL}}.jpg" alt="Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

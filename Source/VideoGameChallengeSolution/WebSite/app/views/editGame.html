@@ -1,0 +1,68 @@
+﻿<div class="jumbotron text-center" ng-controller="appEditComponent">
+    <h1>{{message}}</h1>
+    <h1>Edit your game</h1>
+    <div class="container-fluid" style="float:none;margin:auto;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div>
+                        <form>
+                            <div class="input-group">
+                                <select ng-model="VideoGameId" class="form-control" id="exampleFormControlSelect1">
+                                    <option ng-repeat="x in videoGameList" value="{{x}}">
+                                        {{x.Name}}
+                                    </option>
+                                </select>
+                                <div class="input-group-btn">
+                                    <button ng-click="videoGameSelect(VideoGameId);" type="button" class="btn btn-danger">Select</button>
+                                </div>
+                            </div>
+                        </form>
+                        <form ng-submit="submit()">
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input ng-model="videoGameTarget.Name" type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Short Description:</label>
+                                <input ng-model="videoGameTarget.ShortDecription" type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Full Description:</label>
+                                <input ng-model="videoGameTarget.FullDescription" type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Gender:</label>
+                                <input ng-model="videoGameTarget.Gender" type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">CoverImageURL:</label>
+                                <input ng-model="videoGameTarget.CoverImageURL" type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Publisher:</label>
+                                <input ng-model="videoGameTarget.Publisher" type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Platform:</label>
+                                <input ng-model="videoGameTarget.Platform" type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Release Date:</label>
+                                <input ng-model="videoGameTarget.ReleaseDate" type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Created Date:</label>
+                                <input ng-model="videoGameTarget.CreatedDate" type="text" class="form-control" id="name">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <h1>{{result}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
